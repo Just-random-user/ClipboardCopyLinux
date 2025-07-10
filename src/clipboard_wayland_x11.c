@@ -93,13 +93,6 @@ int copy_wayland(char *to_copy, char* type) {
     return 0;
 }
 
-int copy_wayland_dep(char *to_copy, char* type) {
-    char command[1024];
-    snprintf(command, sizeof(command), "echo -n '%s' | wl-copy -t %s", to_copy, type);
-
-    return system(command);
-}
-
 int main(int argc, char **argv) {
     // Validation
     if (argc < 2) {
